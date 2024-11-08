@@ -16,7 +16,7 @@ public class MathFunctionService {
     private final MathFunctionRepository mathFunctionRepository;
 
     public List<MathFunctionDTO> findAllFunctions(String functionType) {
-        return this.mathFunctionRepository.findByFunctionType(functionType)
+        return this.mathFunctionRepository.findByFunctionName(functionType)
                 .stream()
                 .map(MathFunctionMapper::functionEntityToDTO)
                 .collect(Collectors.toList());
