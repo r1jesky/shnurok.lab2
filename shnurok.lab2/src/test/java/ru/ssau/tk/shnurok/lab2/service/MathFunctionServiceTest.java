@@ -43,7 +43,7 @@ class MathFunctionServiceTest {
 
     @Test
     void testCreate() {
-        MathFunctionDTO dto = new MathFunctionDTO(1, "example", 10, 0.0, 10.0, null);
+        MathFunctionDTO dto = new MathFunctionDTO(1, "example", 10, 0.0, 10.0);
         MathFunctionEntity entity = new MathFunctionEntity(1, "example", 10, 0.0, 10.0, null);
         when(mathFunctionRepository.save(any())).thenReturn(entity);
 
@@ -67,7 +67,7 @@ class MathFunctionServiceTest {
 
     @Test
     void testUpdate() {
-        MathFunctionDTO dto = new MathFunctionDTO(1, "example", 10, 0.0, 10.0, null);
+        MathFunctionDTO dto = new MathFunctionDTO(1, "example", 10, 0.0, 10.0);
         MathFunctionEntity entity = new MathFunctionEntity(1, "example", 10, 0.0, 10.0, null);
         when(mathFunctionRepository.save(any())).thenReturn(entity);
 

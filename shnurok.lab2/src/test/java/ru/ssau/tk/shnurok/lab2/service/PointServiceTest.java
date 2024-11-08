@@ -1,15 +1,15 @@
-package ru.ssau.tk.kasimovserzhantov.labsoop.lab.service;
+package ru.ssau.tk.shnurok.lab2.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import ru.ssau.tk.kasimovserzhantov.labsoop.lab.dto.PointDTO;
-import ru.ssau.tk.kasimovserzhantov.labsoop.lab.entity.MathFunctionEntity;
-import ru.ssau.tk.kasimovserzhantov.labsoop.lab.entity.PointEntity;
-import ru.ssau.tk.kasimovserzhantov.labsoop.lab.repository.MathFunctionRepository;
-import ru.ssau.tk.kasimovserzhantov.labsoop.lab.repository.PointRepository;
+import ru.ssau.tk.shnurok.lab2.dto.PointDTO;
+import ru.ssau.tk.shnurok.lab2.entity.MathFunctionEntity;
+import ru.ssau.tk.shnurok.lab2.entity.PointEntity;
+import ru.ssau.tk.shnurok.lab2.repository.MathFunctionRepository;
+import ru.ssau.tk.shnurok.lab2.repository.PointRepository;
 
 import java.util.Arrays;
 import java.util.List;
@@ -45,7 +45,7 @@ class PointServiceTest {
 
         assertNotNull(points);
         assertEquals(1, points.size());
-        assertEquals(point.getXValue(), points.get(0).getXValue());
+        assertEquals(point.getXVal(), points.get(0).getXVal());
     }
 
     @Test
@@ -57,7 +57,7 @@ class PointServiceTest {
         PointDTO createdDto = pointService.create(dto);
 
         assertNotNull(createdDto);
-        assertEquals(dto.getXValue(), createdDto.getXValue());
+        assertEquals(dto.getXVal(), createdDto.getXVal());
         verify(pointRepository).save(any());
     }
 
@@ -69,7 +69,7 @@ class PointServiceTest {
         PointDTO dto = pointService.read(1);
 
         assertNotNull(dto);
-        assertEquals(entity.getXValue(), dto.getXValue());
+        assertEquals(entity.getXVal(), dto.getXVal());
     }
 
     @Test
@@ -81,7 +81,7 @@ class PointServiceTest {
         PointDTO updatedDto = pointService.update(dto);
 
         assertNotNull(updatedDto);
-        assertEquals(dto.getXValue(), updatedDto.getXValue());
+        assertEquals(dto.getXVal(), updatedDto.getXVal());
         verify(pointRepository).save(any());
     }
 

@@ -11,7 +11,7 @@ class MathFunctionDTOTest {
 
     @Test
     public void testMathFunctionDTO() {
-        MathFunctionDTO dto = new MathFunctionDTO(1, "Example", 2, 1.0, 10.0, null);
+        MathFunctionDTO dto = new MathFunctionDTO(1, "Example", 2, 1.0, 10.0);
 
         assertEquals(1, dto.getId());
         assertEquals("Example", dto.getFunctionName());

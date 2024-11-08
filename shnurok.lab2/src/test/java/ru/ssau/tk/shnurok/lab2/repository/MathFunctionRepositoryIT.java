@@ -25,7 +25,7 @@ public class MathFunctionRepositoryIT {
     @BeforeEach
     public void setup() {
         MathFunctionEntity function = new MathFunctionEntity();
-        function.setFunctionType("Example");
+        function.setFunctionName("Example");
         this.mathFunctionRepository.save(function);
     }
 
@@ -34,7 +34,7 @@ public class MathFunctionRepositoryIT {
         List<MathFunctionEntity> functions = this.mathFunctionRepository.findByFunctionName("Example");
 
         assertEquals(1, functions.size());
-        assertEquals("Example", functions.get(0).getFunctionType());
+        assertEquals("Example", functions.get(0).getFunctionName());
     }
 
 }

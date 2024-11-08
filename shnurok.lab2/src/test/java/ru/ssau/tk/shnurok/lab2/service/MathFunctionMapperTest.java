@@ -23,7 +23,7 @@ class MathFunctionMapperTest {
 
     @Test
     void testFunctionDTOToFunctionEntity() {
-        MathFunctionDTO dto = new MathFunctionDTO(1, "Example", 10, 0.0, 10.0, null);
+        MathFunctionDTO dto = new MathFunctionDTO(1, "Example", 10, 0.0, 10.0);
         MathFunctionEntity entity = MathFunctionMapper.functionDTOToFunctionEntity(dto);
 
         assertNotNull(entity);
