@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PointDTO {
     private int id;
-    private int functionId; // Ссылка на функцию
+    private int functionId;
     private double xVal;
     private double yVal;
 }
